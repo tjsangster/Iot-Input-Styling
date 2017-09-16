@@ -1,0 +1,266 @@
+/* Iot Apps theme */
+
+:root {
+    --background-color: #eee;
+    --jump-color: #eb8b1b;
+    --input-fontfamily: Arial, Helvetica, sans-serif;
+    --input-fontsize: 1em;
+    --input-font-color: #666;
+    --input-padding: .5em;
+    --input-radius: 2px;
+    --input-backing: rgba(238, 238, 238, 0);
+    --input-offset-color: white;
+    --input-invalid-color: #f55;
+}
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0; 
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+input, 
+button,
+select, 
+textarea {
+    font-family: var(--input-fontfamily);
+    font-size: var(--input-fontsize);
+    padding: var(--input-padding);
+    border-radius: var(--input-radius);
+    transition: all .5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    outline: none;
+    color: var(--input-font-color);
+}
+
+input:invalid {
+    outline: none;
+    box-shadow: none;
+    border: solid 1px var(--input-invalid-color);
+}
+
+input,
+select,
+textarea {
+    background-color: var(--input-backing);
+    border: solid 1px var(--input-font-color);
+}
+
+textarea {overflow: auto;}
+
+select {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;
+   cursor: pointer;
+}
+
+select:hover {
+    border: solid 2px var(--input-offset-color);
+    background: var(--jump-color);
+    color: var(--input-offset-color);
+    padding: calc(var(--input-padding) - 1px);
+}
+
+option {
+    font-family: var(--input-fontfamily);
+    font-size: var(--input-fontsize);
+    padding: var(--input-padding);
+    background: var(--input-offset-color);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="month"],
+input[type="week"],
+input[type="range"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="radio"],
+input[type="checkbox"],
+textarea,
+select {
+    transition: background .5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px var(--jump-color);
+    padding-bottom: calc(var(--input-padding) - 1px);
+    padding-top: calc(var(--input-padding) + 1px);
+    padding-left: calc(var(--input-padding) + 1px);
+    padding-right: calc(var(--input-padding) + 1px);
+}
+
+button, 
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    border: solid 2px var(--jump-color);
+    color: var(--input-offset-color);
+    background-color: var(--jump-color);
+    letter-spacing: .03em;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    border: solid 2px var(--input-offset-color);
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+    border: solid 2px var(--jump-color);
+    background-color: var(--input-offset-color);
+    transition: none;
+    color: var(--input-font-color);
+}
+
+textarea:focus, 
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="range"]:active,
+input[type="number"]:focus,
+select:focus {
+    border: solid 2px var(--jump-color);
+    background-color: var(--input-offset-color);
+    padding: calc(var(--input-padding) - 1px);
+    color: var(--input-font-color);
+}
+
+/* Radio and Checkbox */
+
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--input-backing);
+    border: solid 1px var(--input-font-color);
+    width: var(--input-fontsize);
+    height: var(--input-fontsize);
+    margin: 0;
+    cursor: pointer;
+    font-size: var(--input-fontsize);
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    background-color: var(--jump-color);
+    color: var(--input-offset-color);
+    border: solid 2px var(--input-offset-color);
+    font-size: calc(var(--input-fontsize) - 2px);
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    font-family: var(--input-fontfamily);
+    color: var(--input-font-color);
+    font-size: var(--input-fontsize);
+    padding: 0 var(--input-padding);
+    vertical-align: middle;
+    height: 100%;
+}
+
+/* Sliders */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    border: solid 1px var(--input-font-color);
+    outline: none;
+    height: calc(var(--input-fontsize) + var(--input-padding) * 2);
+}
+
+input[type="range"]:focus {
+    outline: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid var(--jump-color);
+  height: 100%;
+  width: var(--input-fontsize);
+  border-radius: var(--input-radius);
+  background: var(--jump-color);
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  border: 2px solid var(--jump-color);
+  height: calc(100% - 4px);
+  width: var(--input-fontsize);
+  border-radius: var(--input-radius);
+  background: var(--jump-color);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  border: 2px solid var(--jump-color);
+  height: calc(100% - 4px);
+  width: var(--input-fontsize);
+  border-radius: var(--input-radius);
+  background: var(--jump-color);
+  cursor: pointer;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {border: solid 2px var(--input-offset-color);}
+input[type="range"]:hover::-ms-thumb {border: solid 2px var(--input-offset-color);}
+input[type="range"]:hover::-moz-range-thumb {border: solid 2px var(--input-offset-color);}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    border: solid 2px var(--jump-color);
+    background: var(--input-offset-color);
+}
+
+input[type="range"]:active::-ms-thumb {
+    border: solid 2px var(--jump-color);
+    background: var(--input-offset-color);
+}
+
+input[type="range"]:active::-moz-range-thumb {
+    border: solid 2px var(--jump-color);
+    background: var(--input-offset-color);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: var(--input-font-color);
+    border-radius: var(--input-radius);
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: var(--input-font-color);
+    border-radius: var(--input-radius);
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: var(--input-font-color);
+    border-radius: var(--input-radius);
+}

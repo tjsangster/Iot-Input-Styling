@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="IotInput.css">
+        <style>
+            body {
+                padding: 1em;
+                font-family: Helvetica, sans-serif;
+                color: #333;
+            }
+            div {
+                width: 100%;
+                padding: 2em 2em 0 2em;
+            }
+            h2 {
+                font-family: Arial, helvetica, sans-serif;
+                color: #444;
+                font-size: 1.3em;
+                text-transform: uppercase;
+                padding-bottom: 1em;
+            }
+            input[type="range"] {width: 300px; margin: 0 0 .5em 0;}
+            li {margin: .5em 0;}
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <h2>Text Area</h2>
+                <textarea style="width: 300px;" rows="5" draggable="false">Some intro text...</textarea>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2>Range Input</h2>
+                <input type="range" value="20" min="0" max="100">
+                <input type="range" value="50" min="0" max="100">
+                <input type="range" value="80" min="0" max="100">
+            </div>
+            <div>
+                <h2>Select</h2>
+                <select>
+                    <option>
+                        Option 1
+                    </option>
+                    <option>
+                        Option 2
+                    </option>
+                    <option>
+                        Option 3
+                    </option>
+                </select> 
+            </div>
+            <div>
+                <h2>Input Checkbox</h2>
+                <ul style="list-style:none;">
+                    <li><input type="checkbox"><label>Option 1</label></li>
+                    <li><input type="checkbox"><label>Option 2</label></li>
+                    <li><input type="checkbox"><label>Option 3</label></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Input Radio</h2>
+                <ul style="list-style:none; margin:0">
+                    <li><input name="radio_field" type="radio"><label>Option 1</label></li>
+                    <li><input name="radio_field" type="radio"><label>Option 2</label></li>
+                    <li><input name="radio_field" type="radio"><label>Option 3</label></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Text Input</h2>
+                <input type="text" placeholder="Username">
+            </div>
+            <div>
+                <h2>Password Input</h2>
+                <input type="password" placeholder="Password">
+            </div>
+            <div>
+                <h2>Input Email</h2>
+                <input type="email" placeholder="john@example.com">
+            </div>
+            <div>
+                <h2>Input URL</h2>
+                <input type="url" placeholder="example.com">
+            </div>
+            <div>
+                <h2>Input Number</h2>
+                <input type="number">
+            </div>
+            <div>
+                <h2>Input Search</h2>
+                <input type="search" placeholder="Search">
+            </div>
+            <div>
+                <h2>Date Input</h2>
+                <input type="date">
+            </div>
+            <div>
+                <h2>Input Time</h2>
+                <input type="time">
+            </div>
+            <div>
+                <h2>Input Week</h2>
+                <input type="week">
+            </div>
+            <div>
+                <h2>Input Month</h2>
+                <input type="month">
+            </div>
+            <div>
+                <h2>Button</h2>
+                <button>Button</button>
+            </div>
+            <div>
+                <h2>Input Submit</h2>
+                <input type="submit">
+            </div>
+            <div>
+                <h2>Input Button</h2>
+                <input type="button" value="Button">
+            </div>
+            <div>
+                <h2>Input Reset</h2>
+                <input type="reset">
+            </div>
+        </form>
+    </body>
+</html>

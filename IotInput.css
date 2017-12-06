@@ -25,6 +25,9 @@ input,
 button,
 select, 
 textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font-family: var(--input-fontfamily);
     font-size: var(--input-fontsize);
     padding: var(--input-padding);
@@ -50,9 +53,6 @@ textarea {
 textarea {overflow: auto;}
 
 select {
-   -webkit-appearance: none; 
-   -moz-appearance: none;
-   appearance: none;
    cursor: pointer;
 }
 
@@ -149,9 +149,6 @@ select:focus {
 
 input[type="radio"],
 input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     background: var(--input-backing);
     border: solid 1px var(--input-font-color);
     width: var(--input-fontsize);
@@ -183,7 +180,6 @@ input[type="checkbox"] + label {
 /* Sliders */
 
 input[type="range"] {
-    -webkit-appearance: none;
     background: transparent;
     border: solid 1px var(--input-font-color);
     outline: none;
@@ -195,7 +191,6 @@ input[type="range"]:focus {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
   border: 2px solid var(--jump-color);
   height: 100%;
   width: var(--input-fontsize);
